@@ -1,0 +1,147 @@
+{% extends "layout.html" %} {% block body %}
+<head>
+	<!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+	<!-- Customized Bootstrap Stylesheet -->
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Template Stylesheet -->
+	<link href="../static/css/style2.css" rel="stylesheet">
+</head>
+
+<div style="background-color: black;">
+	<h1 style="color: black;">Demo font</h1>
+	<h2 style="color: black;">trial font</h2>
+</div>
+
+<!-- Header Start -->
+<div class="container-fluid header bg-white p-0">
+	<div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+		<div class="col-md-6 p-5 mt-lg-5">
+			<h1 class="display-5 animated fadeIn mb-4">We are here to  <span class="text-primary">Guide you </span>on your Path</h1>
+			<p class="text-wh mx-auto my-4 fs-3 animated fadeIn mb-4 pb-2"><strong> Here are some questions we'll answer</strong></p>
+			<p class="text-li mx-auto mt-2">
+				1. What crop to plant here? <br>
+				2. What fertilizer to use? <br>
+				3. Which disease do your crop have?<br>
+				4. How to cure the disease?</p>
+			<a href="contact" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Contact Us</a>
+		</div>
+		<div class="col-md-6 animated fadeIn">
+			<div class="owl-carousel header-carousel">
+				<div class="owl-carousel-item">
+					<img class="img-fluid" src="{{url_for('static',filename='assets/img/about-bg.png')}}" alt="img">
+				</div>
+				<div class="owl-carousel-item">
+					<!-- <img class="img-fluid" src="{{url_for('static',filename='assets/img/bg1.jpg')}}" alt="img"> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Header End -->
+
+       <!-- About Start -->
+	   <div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-5 align-items-center">
+				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+					<div class="about-img position-relative overflow-hidden p-5 pe-0">
+						<img class="img-fluid w-100" src="{{url_for('static',filename='assets/img/1234.jpg')}}">
+					</div>
+				</div>
+				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+					<h1 class="mb-4">#1 A Place To Find A Perfect Solution</h1>
+					<p class="mb-4">We are here to guide the farmers with best solutions.</p>
+					<p><i class="fa fa-check text-primary me-3"></i>Crop Recommendation – The best crop to grow in your farm according to your location and weather conditions.</p>
+					<p><i class="fa fa-check text-primary me-3"></i>Fertilizer Recommendation – Which fertilizers to use according to the nutrients level (NPK values) of your crop.</p>
+					<p><i class="fa fa-check text-primary me-3"></i>Disease Detection – Diseases caught by your crops (if any) and how to cure that disease, else classify them as healthy.</p>
+					<p><i class="fa fa-check text-primary me-3"></i>Knowledge Section – Innovative ideas and tips for farming i.e Blogs for users which will be added through the admin panel. You can give your suggestions in contact section we will add them.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About End -->
+
+	
+<!-- Main Content-->
+<main class="mb-4">
+	<div class="container px-4 px-lg-5">
+		<div class="row gx-4 gx-lg-5 justify-content-center">
+			<div class="col-md-10 col-lg-8 col-xl-7">
+				<p>
+					Farming is one of the major sectors that influences a country’s economic growth.
+					In country like India, majority of the population is dependent on agriculture for their livelihood. 
+					Many new technologies, such as Machine Learning and Deep Learning, are being implemented into 
+					agriculture so that it is easier for farmers to grow and maximize their yield.
+				</p>
+				<p>
+					“Farmers are vulnerable to insect attacks and crops are susceptible to diseases” if they are not controlled, depending upon the situation, and climatic condition. 80-90% crop losses are possible if plant protection is not done properly.
+					To counter this need farmers need to be educated on the use of plant protection mechanisms. 
+					The basic objective is to give exposure to the Indian farmers on modern methods, to boost agriculture , 
+					helping the new farmers by acting as a mentor and Improving quality of rural life.
+				</p>
+				<p>
+					India has enough food; does it have too many people working in agriculture? The pressure on land is an outcome of policy, which condemns most people to marginal farming. India needs a different set of solutions for agriculture and for those working the land.
+				</p>
+				<p>
+					The main objective is to bring awareness to farmers about the importance of implementing knowledge and best practices to improve the production system to yield more food. With <span class="text-primary">Meadow </span>, farmers can find best farm practices in the form of tasks which guide them chronologically what to do during a growing season.
+				</p>
+			</div>
+		</div>
+	</div>
+</main>
+
+<hr>
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+	<div class="container">
+		<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+			<h1 class="mb-3">Our Studies Say!</h1>
+			<p>“Unless technology and awareness are provided to farmers, the risk will continue!”
+			</p>
+		</div>
+		<div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+			<div class="testimonial-item bg-light rounded p-3">
+				<div class="bg-white border rounded p-4">
+					<p>Today’s agriculture policies fail to recognise how crop choices, input costs, and the supply chain are intertwined, perpetuating marginal farming.</p>
+					<div class="d-flex align-items-center">
+						<div class="ps-3">
+							<h6 class="fw-bold mb-1">Rahul Tongia</h6>
+							<small>Fellow at Brookings India, and a scholar of technology, policy, and sustainability</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="testimonial-item bg-light rounded p-3">
+				<div class="bg-white border rounded p-4">
+					<p>Farmer knowledge is the result of farmers' own curiosity, creativity and efforts. Ownership of self-made knowledge strengthens farmers</p>
+					<div class="d-flex align-items-center">
+						<div class="ps-3">
+							<h6 class="fw-bold mb-1">Priyanka Sharma</h6>
+							<small>Student at Cambridge</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Testimonial End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+<!-- Footer-->
+{%endblock%}

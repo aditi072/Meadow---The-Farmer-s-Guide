@@ -1,0 +1,64 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+  html body {
+    background-color: black;
+  }
+  .head{
+    font-style: italic;
+    font-family: 'Times New Roman';
+  } 
+  .font{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .form{
+    background-image: url('{{ url_for("static",filename="assets/img/bg4.jpg")}}');
+    background-size: cover;
+  }
+</style>
+
+<br /><br />
+<div class="form"><hr><br>
+  <h2 style="text-align: center; margin: 0px; color: black">
+    <b class="head">Find out which disease has been caught by your plant</b>
+  </h2>
+  <br />
+  <br>
+
+<div style="
+    width: 350px;
+    height: 20rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;">
+
+<form class="form-signin" method=post enctype=multipart/form-data>
+    <h2 class="h4 mb-3 font-weight-normal font"><b>Please Upload The Image</b></h2>
+    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+    <br>
+    <br>
+    <!-- <img id="output-image" class="rounded mx-auto d-block" /> -->
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="color: white; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px; background-color: black; margin-top: 12px;">Predict</button>
+  </form>
+</div>
+<h2 style="text-align: center; padding-top: 12px; color: white">
+  <b class="head">  To Those That Work In Acres, Not In Hours... <br>
+    We Thank You! 🙏</b>
+</h2><br>
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</div>
+{% endblock %}
