@@ -150,10 +150,11 @@ mail = Mail(app)
 
 # =================================================================================
 # Connection of the database.
-if(local_server):
-    app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
-else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
+# if(local_server):
+    # app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://bczwbgosvgbrwb:d6a075b224215e9bfddb3c3f1ef14a42a9b704749f1153f5f75ddf50910608a0@ec2-35-153-35-94.compute-1.amazonaws.com:5432/dfj6lq10mfra4c'
+# else:
+#     app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
 db = SQLAlchemy(app)
 
 # Make class for the particular contact  table in database.
